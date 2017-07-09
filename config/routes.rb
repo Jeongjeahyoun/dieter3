@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  devise_for :users
+  devise_for :users, :controllers => { registrations: 'registrations' } 
   
   root 'home#index'
   post '/tinymce_assets' => 'tinymce_assets#create'
