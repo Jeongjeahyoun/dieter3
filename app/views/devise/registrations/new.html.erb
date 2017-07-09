@@ -1,11 +1,75 @@
-<h2>Sign up</h2>
+<DOCTYPE!>
+  <html>
+    <head>
+      
+    </head>
+    <style>
+      body{
+        width:100%;
+        height:auto;
+       
+        background-size:cover;
+        
+      }
+      h2{
+        font-size:50px;
+        padding-left:10px;
+      }
+      .big{
+       display:inline-block;
+       width:100%;
+       height:100%;
+       vertical-align:middle;
+       text-align:center;
+       padding-top:100px;
+      }
+      .form-inputs{
+        padding-top:50px;
+      }
+      .id-inputs{
+        padding-top:10px;
+       
+      }
+      .pw-inputs{
+        padding-top:10px;
+      }
+      .pc-inputs{
+        padding-top:10px;
+        
+      }
+      .form-actions{
+        padding-top:40px;
+       
+      }
+    
+     
+    </style>
+<div class =big>
+<h2>SIGN-UP</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
+<<<<<<< HEAD
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
+=======
+  <div class="form-inputs">
+    <div class="id-inputs">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+    </div>
+    <div class="pw-inputs">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "off" ,hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+    </div>
+    <div class="pc-inputs">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, required: true %> 
+
+    </div>
+>>>>>>> cd8e5975fbef27be21a14a3491a31831a2ecc0f7
   </div>
   
   <div class="field">
@@ -13,6 +77,7 @@
     <%= f.text_field :name, autocomplete: "off" %>
 </div>
 
+<<<<<<< HEAD
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
@@ -28,6 +93,12 @@
 
   <div class="actions">
     <%= f.submit "Sign up" %>
+=======
+  <div class="form-actions">
+    <div class="button">
+   <input type="submit" name="commit" value="SIGN-UP→" style="background-color:black; color:white;width:100px;height:50px">
+   </div>
+>>>>>>> cd8e5975fbef27be21a14a3491a31831a2ecc0f7
   </div>
 <% end %>
 
