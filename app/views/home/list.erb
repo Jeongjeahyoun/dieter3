@@ -1,0 +1,19 @@
+    <div class="container">
+        <h1>게시판</h1>
+         <div class="col-sm-5 col-sm-offset-2 col-md-8 col-md-offset-0">
+        <table class="table">
+        <th>제목</th><th>글쓴이</th><th>날짜</th><th>조회수</th>
+            <% @all_post.each do |p| %>
+            <tr>
+                <td><a href="/home/detail/<%=p.id%>"><%=p.title%></a></td>
+                <td><%=p.writer%></td>
+                <td><%=p.created_at %></td>
+                <td><%=p.hit%></td>
+            </tr>
+
+            <% end %>
+        </table>
+        </div>
+        
+        <div class="col-md-8 col-md-offset-0"><a href="/home/write"><button type="button" class="btn btn-warning">글쓰기</button></a></div>
+    </div>

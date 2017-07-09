@@ -1,0 +1,19 @@
+<div class="container">
+    <form action="/home/update_ok/<%=@one_post.id%>" method="POST">
+      <div class="form-group">
+        <label >제목</label>
+        <input type="text" name="title" class="form-control" id="title" value="<%=@one_post.title%>" placeholder="제목을 입력해주세요">
+      </div>
+      <div class="form-group">
+        <label >글쓴이</label>
+        <input type="text" name="writer" class="form-control" id="writer" value="<%=@one_post.writer%>" placeholder="글쓴이를 입력해주세요">
+      </div>
+    <div class="form-group">
+                  <%= tinymce %>
+                <label for="exampleTextarea">내용</label>
+                <textarea name="content" class="form-control tinymce" rows="20" id="comment"><%=@one_post.content.html_safe%></textarea>
+     </div>
+      
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+</div>
